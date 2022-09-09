@@ -3,10 +3,11 @@
 const { Resolver } = require('dns');
 const readline = require('readline');
 
-// conectar a la base de datos
+// Conecting to database
+
 const connection = require('./lib/connectMongoose');
 
-// cargar los modelos
+// Load models
 const Product = require('./models/Products');
 
 async function main() {
@@ -17,7 +18,7 @@ async function main() {
     process.exit();
   }
 
-  // inicializar la colección de agentes
+  // Init products collection
   await initProducts();
 
   connection.close();
@@ -65,15 +66,7 @@ function question(text) {
     ifc.question(text, answer => {
       answer.toLowerCase() === 'y' || answer.toLowerCase() === 'yes' ? resolve(true) : resolve(false);
       ifc.close()
-      
-
-      /* ifc.close();
-      if (answer.toLowerCase() === 'yes' ||'y') {
-        resolve(true);
-        return;
-      }
-      resolve(false);
-    }) */});
+   });
 
    })
 }
