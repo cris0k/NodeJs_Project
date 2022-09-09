@@ -24,10 +24,8 @@ router.post('/', async (req, res, next) => {
   try {
     const advertData = req.body;
 
-    // instanciamos objeto en memoria
     const product = new Product(advertData);
 
-    // lo guardamos en la base de datos
     const productSaved = await product.save();
 
     res.json({ result: productSaved });

@@ -1,8 +1,23 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  
+  width: 90%;
+  height: 100vh;
+  margin:0 auto;
+  font: 16px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  
 }
 
 a {
   color: #00B7FF;
+}
+
+img {
+  height: 300px;
+  width: 200px;
 }
