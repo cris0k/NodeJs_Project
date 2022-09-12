@@ -1,7 +1,7 @@
 'use strict';
 
-const { Resolver } = require('dns');
 const readline = require('readline');
+const Ads = require('./initAds.js')
 
 // Conecting to database
 
@@ -36,23 +36,9 @@ async function initProducts() {
 
   // Initial data
 
-  const inserted = await Product.insertMany([
-   {
-      name: 'Nikon Camera',
-      sale: true,
-      price: 950.00,
-      photo: 'camera_niko.jpg',
-      tags:['technology', 'work']
-  },
-  {
-      name: 'Ray-Ban Sunglasses ',
-      sale: false,
-      price: 250.00,
-      photo: 'sunglasses_black.jpg',
-      tags:['fashion']
-   }
-  ]);
-  console.log(`${inserted.length} adverts created.`);
+  const inserted = await Product.insertMany(Ads);
+
+  console.log(`${inserted.length} adverts created.`) 
 }
 
 function question(text) {
