@@ -11,17 +11,21 @@
     <% adverts.forEach(product => { %>
       <img src="<%= product.photo %>" alt="<%=product.name%>">
       <ul>
-        <li><%= product.name %> </li>
-        <li> 
+        <li class ="p_name"><%= product.name %> </li>
+        <li>Price <%= product.price %> €</li>
+        <li class="status"> 
           <% if (product.sale) { %>
           <p>On sale</p>
+          <button>Buy</button>
+          <button class="offer">Send an offer</button>
         <% } else { %>
           <p>Searching</p>
+          <button>Sell</button>
+          <button class="offer">Send an offer</button>
         <% } %>
         </li>
-        <li>Price <%= product.price %> €</li>
-        
       </ul>
+      
     <% }) %>
   </main>
   </body>
