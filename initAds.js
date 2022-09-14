@@ -42,7 +42,7 @@ const Ads = [
         tags:['technology','work']
     },
     {
-        name: 'Mac Book Pro',
+        name: 'Mac Book Pro Laptop',
         sale: true,
         price: 950.00,
         photo: '/images/laptop_macbookpro.jpg',
