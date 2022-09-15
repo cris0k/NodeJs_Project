@@ -63,7 +63,7 @@ Here is what you can expect to see:
 ### POST /api/products
 
 You can post your own ad to the website.\
-A very easy way to do so is throgh `Postman` or any other similar platforms.
+A very easy way to do so is through `Postman` or any other similar platforms.
 
 Here is an example and what you should expect to see:
 # ![alt text](https://github.com/cris0k/NodeJs_Project/blob/main/public/images/Screenshot_example-Postman.png)
