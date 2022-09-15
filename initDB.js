@@ -12,7 +12,7 @@ const Product = require('./models/Products');
 
 async function main() {
 
-  const verify = await question('Are you sure you want to delete the database and load the initial data?');
+  const verify = await question('Are you sure you want to delete the database and load the initial data(y/n)?');
 
   if (!verify) {
     process.exit();
