@@ -55,8 +55,8 @@ http://localhost:3000/api/products \
 to see the API's data
 
 Here is what you can expect to see:
-# ![alt text](/nodepop/public/images/Screenshot_main.png)
-# ![alt text](/nodepop/public/images/Screemshot_apidata.png)
+# ![alt text](https://github.com/cris0k/NodeJs_Project/blob/main/public/images/Screenshot_main.png)
+# ![alt text](https://github.com/cris0k/NodeJs_Project/blob/main/public/images/Screemshot_apidata.png)
 
 ## Functionality
 
@@ -66,7 +66,7 @@ You can post your own ad to the website.\
 A very easy way to do so is throgh `Postman` or any other similar platforms.
 
 Here is an example and what you should expect to see:
-# ![alt text](/nodepop/public/images/Screenshot_example-Postman.png)
+# ![alt text](https://github.com/cris0k/NodeJs_Project/blob/main/public/images/Screenshot_example-Postman.png)
 
 ### Filter
 
@@ -78,9 +78,9 @@ There is no need to write the full name or the first name.
 These are the tags available.
 - price: http://localhost:3000//?price= `amount`\
 It will list the adverts that go from the amount entered to the cheapest.
-- sale: http://localhost:3000//?sale=`true or false`\
+- sale: http://localhost:3000//?sale= `true or false`\
 There are items that people are looking for, not only selling.
-- sort: http://localhost:3000//?sort=`by name, price..`\
+- sort: http://localhost:3000//?sort= `by name, price..`\
 This way you can sort ads so they are easier to find. If you want to sort them starting from the end you just can add `-` before ,for example: `-name or -price,etc.`
 - limit: http://localhost:3000//?limit= `number`\
 The amount of ads you wouldlike to see on the page.
