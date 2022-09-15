@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const productsSchema = mongoose.Schema({
     name: String,
     sale: Boolean,
-    price: Number,
+    price: { type: Number, min: 1, max: 10000 },
     photo: String,
     tags:[String]
 }, {
@@ -16,6 +16,7 @@ productsSchema.statics.list = function(filter, skip, limit, fields, sort) {
     query.limit(limit);
     query.select(fields);
     query.sort(sort);
+    
     return query.exec();
   }
 

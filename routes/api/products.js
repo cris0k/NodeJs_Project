@@ -1,17 +1,16 @@
 const express = require('express');
 const router = express.Router();
-const {query, validationResult } = require('express-validator');
 const Product = require('../../models/Products.js');
 
 //GET /api/products
 // returns a list of products
 
 router.get('/', async (req, res, next) => {
-    try {
+  try {
        
-      const products = await Product.find();
+    const products = await Product.find();
   
-      res.json({ adverts: products });
+    res.json({ adverts: products });
   
     } catch (err) {
       next(err);
@@ -31,8 +30,8 @@ router.post('/', async (req, res, next) => {
 
     res.json({ result: productSaved });
 
-  } catch (error) {
-    next(error);
+  } catch (err) {
+    next(err);
   }
 });
 

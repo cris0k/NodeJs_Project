@@ -18,28 +18,28 @@ const Ads = [
         sale: true,
         price: 70.00,
         photo: '/images/backpack_fjallraven.jpg',
-        tags:['fashion','school']
+        tags:['fashion', 'school']
    },
    {
         name: 'Levels Backpack',
         sale: true,
         price: 50.00,
         photo: '/images/backpack_levels_jeans.jpg',
-        tags:['fashion','school']
+        tags:['fashion', 'school']
     },
     {
         name: 'Polaroid Camera ',
         sale: false,
         price: 350.00,
         photo: '/images/camera_polaroid_black.jpg',
-        tags:['technology','work']
+        tags:['technology', 'work']
     },
     {
         name: 'Dell Laptop',
         sale: true,
         price: 400.00,
         photo: '/images/laptop_dell.jpg',
-        tags:['technology','work']
+        tags:['technology', 'work']
     },
     {
         name: 'Mac Book Pro Laptop',

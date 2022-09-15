@@ -12,7 +12,8 @@
       <img src="<%= product.photo %>" alt="<%=product.name%>">
       <ul>
         <li class ="p_name"><%= product.name %> </li>
-        <li>Price <%= product.price %> €</li>
+        <li>Price: <%= product.price %> € </li>
+        <li>#<%= product.tags %> </li>
         <li class="status"> 
           <% if (product.sale) { %>
           <p>On sale</p>
