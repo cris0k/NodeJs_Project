@@ -1,7 +1,7 @@
 const { response } = require('express');
 var express = require('express');
 var router = express.Router();
-const Product = require('/home/cris/Documents/Web13/Nodepop_Project/nodepop/models/Products.js');
+const Product = require('../models/Products.js');
 
 /* GET home page. */
 router.get('/', async(req, res, next) => {

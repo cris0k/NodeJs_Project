@@ -62,8 +62,8 @@ Here is what you can expect to see:
 
 ### POST /api/products
 
-You can post your own ad to the website.\
-A very easy way to do so is through `Postman` or any other similar platforms.
+You can post your own ad on the website.\
+A very easy way to do so is using `Postman` or any other similar platforms.
 
 Here is an example and what you should expect to see:
 # ![alt text](https://github.com/cris0k/NodeJs_Project/blob/main/public/images/Screenshot_example-Postman.png)
@@ -89,3 +89,8 @@ The amount of ads you would like to skip and not see on the page.
 
 A combination of some of them:
 http://localhost:3000/?tag=school&sale=false&name=bottle&price=50&limit=2&sort=price
+
+If you would like to see only the photo of a certain item just go to\
+http://localhost:3000/images/ `image name taken from api photo:.jpg`
+
+For example: http://localhost:3000/images/backpack_levels_jeans.jpg
