@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const i18n = require('./lib/i18nConfigure')
 
 var app = express();
 
@@ -19,13 +20,19 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
 // API Route
 
 app.use('/api/products', require('./routes/api/products'));
 
+// Setup i18n
+
+app.use(i18n.init);
+
 // Website route
 
 app.use('/',       require('./routes/index'));
+app.use('/change-locale', require('./routes/change-locale'));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -6,29 +6,41 @@
   </head>
   <body>
     <main>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-    <div class="advert">
-    <% adverts.forEach(product => { %>
-      <img src="<%= product.photo %>" alt="<%=product.name%>">
-      <ul>
-        <li class ="p_name"><%= product.name %> </li>
-        <li>Price: <%= product.price %> € </li>
-        <li>#<%= product.tags %> </li>
-        <li class="status"> 
-          <% if (product.sale) { %>
-          <p>On sale</p>
-          <button>Buy</button>
-          <button class="offer">Send an offer</button>
-        <% } else { %>
-          <p>Searching</p>
-          <button>Sell</button>
-          <button class="offer">Send an offer</button>
-        <% } %>
-        </li>
-      </ul>
+      <nav>
+        <h1 class="title"><%= title %></h1>
+        <div >
+          <% getLocales().forEach(locale => { %>
+            <a class="languages" href="/change-locale/<%=locale%>"><%=locale%></a>&nbsp;
+          <% }) %>
+        </div>
+        
+        
+      </nav>
+      <div class="page-title">
+        <h2><%= __('Adverts') %></h2>
+      </div>
+      <div class="advert">
       
-    <% }) %>
+      <% adverts.forEach(product => { %>
+        <img src="<%= product.photo %>" alt="<%=product.name%>">
+        <ul>
+          <li class ="p_name"><%= product.name %> </li>
+          <li><%= __('Price') %>: <%= product.price %> € </li>
+          <li>#<%= product.tags %> </li>
+          <li class="status"> 
+            <% if (product.sale) { %>
+            <p><%= __('On sale') %></p>
+            <button><%= __('Buy') %></button>
+            <button class="offer"><%= __('Send an offer') %></button>
+          <% } else { %>
+            <p><%= __('Searching') %></p>
+            <button><%= __('Sell') %></button>
+            <button class="offer"><%= __('Send an offer') %></button>
+          <% } %>
+          </li>
+        </ul>
+        
+      <% }) %>
   </div>
   </main>
   </body>
