@@ -30,6 +30,13 @@ Install  `ExpressJS` framework:
 ```
 npm i express
 ```
+Copy .env.example to .env
+
+```
+cp .env.example .env
+```
+and review your configuration.
+
 ## Instuctions to run the website
 
 Run `MongoDB`.\
