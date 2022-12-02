@@ -1,25 +1,9 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <main>
-      <nav>
-        <h1 class="title"><%= title %></h1>
-        <div >
-          <% getLocales().forEach(locale => { %>
-            <a class="languages" href="/change-locale/<%=locale%>"><%=locale%></a>&nbsp;
-          <% }) %>
-        </div>
-        
-        
-      </nav>
-      <div class="page-title">
-        <h2><%= __('Adverts') %></h2>
-      </div>
-      <div class="advert">
+<%- include('header.html') %>
+
+   <div class="page-title">
+      <h2><%= __('Adverts') %></h2>
+    </div>
+    <div class="advert">
       
       <% adverts.forEach(product => { %>
         <img src="<%= product.photo %>" alt="<%=product.name%>">
@@ -41,7 +25,7 @@
         </ul>
         
       <% }) %>
-  </div>
+    </div>
   </main>
   </body>
-</html>
+  </html>
