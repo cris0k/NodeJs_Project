@@ -5,10 +5,11 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <main>
+    
       <nav>
         <h1 class="title"><%= title %></h1>
-        <div >
+        <div class="language-section">
+          <p><%= __('Choose the language') %></p>
           <% getLocales().forEach(locale => { %>
             <a class="languages" href="/change-locale/<%=locale%>"><%=locale%></a>&nbsp;
           <% }) %>

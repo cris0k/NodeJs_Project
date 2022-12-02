@@ -1,5 +1,4 @@
 body {
-  
   width: 90%;
   height: 100vh;
   margin:0 auto;
@@ -15,7 +14,7 @@ body {
 }
 
 nav {
-  background-color: #b2d2f7;
+  background-color: #75d8c3;
   display: flex;
   justify-content: space-between;
   padding: 10px;
@@ -32,17 +31,22 @@ nav {
   text-decoration: none;
   cursor: pointer;
   color: #000000;
-  border: solid;
-  border-radius: 10%;
-  background-color: #f0f17e;
-  padding: 5px;
-  margin-top: 10px;
+  font-size: 1rem;
+
 }
 .languages:hover {
-  background-color: #b2d2f7;
+  color: #ffffff;
   transition: background-color .1s linear;
 }
-
+.language-section{
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  box-shadow: 0 2px 6px #000000;
+  padding: 10px;
+  background-color: #bb9be4;
+}
 img {
   height: 300px;
   width: 200px;
@@ -80,5 +84,12 @@ button:hover{
 }
 .offer {
   background-color: yellow;
+}
+
+footer {
+  padding: 0.5rem;
+  margin-top: auto;
+  text-align: center;
+  background-color: #b2d2f7;
 }
 
