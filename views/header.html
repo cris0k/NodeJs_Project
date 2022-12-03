@@ -3,15 +3,19 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/login.css' />
   </head>
   <body>
     
       <nav>
         <h1 class="title"><%= title %></h1>
+        <div>
+        <a href="/login" class="login">Login</a>
         <div class="language-section">
           <p><%= __('Choose the language') %></p>
           <% getLocales().forEach(locale => { %>
             <a class="languages" href="/change-locale/<%=locale%>"><%=locale%></a>&nbsp;
           <% }) %>
         </div>
+      </div>
       </nav>

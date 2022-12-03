@@ -1,5 +1,7 @@
 'use strict';
 
+require('dotenv').config();
+
 const readline = require('readline');
 const Ads = require('./initAds.js')
 
@@ -8,7 +10,7 @@ const Ads = require('./initAds.js')
 const connection = require('./lib/connectMongoose');
 
 // Load models
-const Product = require('./models/Products');
+const { Product, User } = require('./models');
 
 async function main() {
 
@@ -21,11 +23,25 @@ async function main() {
   // Init products collection
   await initProducts();
 
+  await initUsers();
+
   connection.close();
 
 }
 
 main().catch(err => console.log('Something went wrong:', err));
+
+async function initUsers() {
+  
+  const deleted = await User.deleteMany();
+  console.log(`Deleted ${deleted.deletedCount} users.`);
+
+  const inserted = await User.insertMany([
+    { email: 'admin@example.com', password: 1234 },
+    { email: 'user1@example.com', password: 1234 },
+  ]);
+  console.log(`Created ${inserted.length} users.`);
+}
 
 async function initProducts() {
 

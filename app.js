@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const i18n = require('./lib/i18nConfigure')
+const LoginController = require('./routes/loginController');
 
 var app = express();
 
@@ -11,6 +12,8 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'html'); // usa un motor de vista custom, llamado 'html'
 app.engine('html', require('ejs').__express) // ese motor usa ejs
+
+app.locals.title = 'Nodepop';
 
 require('./lib/connectMongoose.js');
 
@@ -31,9 +34,11 @@ app.use('/api/products', require('./routes/api/products'));
 app.use(i18n.init);
 
 // Website route
+const loginController = new LoginController();
 
 app.use('/',       require('./routes/index'));
 app.use('/change-locale', require('./routes/change-locale'));
+app.use('/login',       loginController.index);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

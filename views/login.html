@@ -1,0 +1,22 @@
+<%- include('header.html') %>
+<div class="login-box">
+    <form class="login-form"  method="post">
+        <div>
+            <label for="username">User Name</label>
+        </div>
+        <div>
+            <input type="text" id="username" name="username" placeholder="Enter your user name">
+        </div>
+        <div>
+            <label for="password">Password</label>
+        </div>
+        <div>
+            <input type="password" id="password" name="password" placeholder="Enter your password">
+        </div>
+        <div>
+            <button  class="button-log" id="loginUserBttn" type="submit" >Log In</button>
+            <a href="/" class="button-cancel">Cancel</a>
+        </div>
+    </form>
+</div>
+<%- include('footer.html') %>
