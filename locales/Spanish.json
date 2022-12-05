@@ -6,5 +6,11 @@
 	"Send an offer": "Envia una oferta",
 	"Searching": "Buscando",
 	"Sell": "Vende",
-	"Choose the language": "Elige el idioma"
+	"Choose the language": "Elige el idioma",
+	"Password": "Contraseña",
+	"Enter your password": "Introduzca su contraseña",
+	"Log In": "Log In",
+	"Cancel": "Cancelar",
+	"Email": "Correo electronico",
+	"Enter your email": "Introduzca su correo electronico"
 }

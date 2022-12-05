@@ -2,20 +2,20 @@
 <div class="login-box">
     <form class="login-form"  method="post">
         <div>
-            <label for="username">User Name</label>
+            <label for="username"><%= __('Email') %></label>
         </div>
         <div>
-            <input type="text" id="username" name="username" placeholder="Enter your user name">
+            <input type="text" id="username" name="username" placeholder="<%= __('Enter your email') %>">
         </div>
         <div>
-            <label for="password">Password</label>
+            <label for="password"><%= __('Password') %></label>
         </div>
         <div>
-            <input type="password" id="password" name="password" placeholder="Enter your password">
+            <input type="password" id="password" name="password" placeholder="<%= __('Enter your password') %>">
         </div>
         <div>
-            <button  class="button-log" id="loginUserBttn" type="submit" >Log In</button>
-            <a href="/" class="button-cancel">Cancel</a>
+            <button  class="button-log" id="loginUserBttn" type="submit" ><%= __('Log In')%></button>
+            <a href="/" class="button-cancel"><%= __('Cancel')%></a>
         </div>
     </form>
 </div>
