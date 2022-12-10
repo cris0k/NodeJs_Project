@@ -37,8 +37,8 @@ async function initUsers() {
   console.log(`Deleted ${deleted.deletedCount} users.`);
 
   const inserted = await User.insertMany([
-    { email: 'admin@example.com', password: 1234 },
-    { email: 'user1@example.com', password: 1234 },
+    { email: 'admin@example.com', password: await User.hashPassword('1234') },
+    { email: 'user@example.com', password: await User.hashPassword('1234') },
   ]);
   console.log(`Created ${inserted.length} users.`);
 }

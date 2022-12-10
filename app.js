@@ -4,7 +4,8 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const i18n = require('./lib/i18nConfigure')
-const LoginController = require('./routes/loginController');
+const LoginController = require('./controller/loginController');
+const jwtAuthMiddleware = require('./lib/jwtAuthMiddleware');
 
 var app = express();
 
@@ -24,21 +25,23 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-
+const loginController = new LoginController();
 // API Route
 
-app.use('/api/products', require('./routes/api/products'));
+app.use('/api/products', jwtAuthMiddleware, require('./routes/api/products'));
+app.use('/api/login',   loginController.postAPI);
 
 // Setup i18n
 
 app.use(i18n.init);
 
 // Website route
-const loginController = new LoginController();
+
 
 app.use('/',       require('./routes/index'));
 app.use('/change-locale', require('./routes/change-locale'));
-app.use('/login',       loginController.index);
+app.get('/login',       loginController.index);
+app.post('/login',   loginController.post);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

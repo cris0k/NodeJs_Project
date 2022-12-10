@@ -112,3 +112,9 @@ footer {
   background-color: #b2d2f7;
 }
 
+.error-message {
+  background-color: rgb(228, 127, 127);
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+

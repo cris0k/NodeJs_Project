@@ -12,5 +12,6 @@
 	"Log In": "Log In",
 	"Cancel": "Cancelar",
 	"Email": "Correo electronico",
-	"Enter your email": "Introduzca su correo electronico"
+	"Enter your email": "Introduzca su correo electronico",
+	"Wrong email or password": "Correo electronico o contraseña erronea"
 }
