@@ -99,7 +99,7 @@ Remember to copy the token after logging in and paste it on the URL
 or adding `Authorization` to the petition's Headers and adding it as its value.
 
 Here is how it looks like:
-# ![alt text](https://github.com/cris0k/NodeJs_Project/blob/main/public/images/Screenshot-example-post.png)
+# ![alt text](https://github.com/cris0k/NodeJs_Project/blob/main/public/images/Screenshot-exmple-post.png)
 
 ### Filter
 
