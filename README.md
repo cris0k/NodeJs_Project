@@ -5,8 +5,8 @@
 This project is a webside simulation that uses an API to show adverts posted by people\
 that are ether selling or looking for a certain product.
 
-The website uses `Node.js` , `Express.js` , `MongoDB` and libraries like `i18n` , `jsonwebtoken` ,\
-`bcrypt` or `multer`
+The website uses `Node.js` , `Express.js` , `MongoDB` and libraries like `i18n` , `Cote` , `jsonwebtoken` ,\
+`bcrypt`, `Jimp` or `Multer`
 
 ## What will you need?
 
@@ -87,6 +87,20 @@ using `Postman` or any other similar platforms.\
 Here is an image with the creentials you can use to log in and the way the response must look.\
 The token expires in 2 days.
 # ![alt text](https://github.com/cris0k/NodeJs_Project/blob/main/public/images/Screenshot-example-login.png)
+
+### Microservices
+
+One of the challenges was to create a microservice which will create a thumbnail of every photo\
+uploaded with the advert.\
+First, open another terminal and move to the folder microservices
+```
+cd microservices
+```
+Run the microservice 
+```
+npx nodemon resizeService.js
+```
+Ones is running, every time an advert is uploaded, a copy of the images will be rezised to 100x100 and be added to the thumbnail folder
 
 ### POST /api/products
 
