@@ -5,6 +5,8 @@
 This project is a webside simulation that uses an API to show adverts posted by people\
 that are ether selling or looking for a certain product.
 
+The website uses `Node.js` , `Express.js` , `MongoDB` and libraries like `i18n` , `jsonwebtoken` ,\
+`bcrypt` or `multer`
 
 ## What will you need?
 
@@ -13,8 +15,8 @@ First, clone the project with:
 ```
 git clone https://github.com/cris0k/NodeJs_Project
 ```
-Then, you will need to have `NodeJs`, `MongoDB` and `ExpressJS` installed\
-as we will be using them to run de website.
+Then, you will need to have `NodeJs`, `MongoDB` and `ExpressJS` installed as we will be using them\
+to run de website.
 
 Here you can download `NodeJs`:
 
@@ -56,29 +58,54 @@ Run the app:
 npm run dev
 ```
 Open your browser and go to:\
-http://localhost:3000/ \
-to see the main page or\
-http://localhost:3000/api/products \
-to see the API's data
+http://localhost:3000/  to see the main page or\
+http://localhost:3000/api/products to see the API's data but,
+this data is protected with Json Web Token\
+so in order to
+see the content yo must log in first.
 
 Here is what you can expect to see:
-# ![alt text](https://github.com/cris0k/NodeJs_Project/blob/main/public/images/Screenshot_main.png)
-# ![alt text](https://github.com/cris0k/NodeJs_Project/blob/main/public/images/Screemshot_apidata.png)
+# ![alt text](https://github.com/cris0k/NodeJs_Project/blob/main/public/images/Screenshot-exmple-mainpage.png)
+# ![alt text](https://github.com/cris0k/NodeJs_Project/blob/main/public/images/Screenshot_apidata.png)
 
 ## Functionality
 
+The website has been translated, so you have the options to choose between `English` or `Spanish`.
+
+There is a Login button which will lead you to a Login form.\
+http://localhost:3000/login
+
+The only credentials that are accepted are 
+```
+user : admin@example.com password : 1234
+user : user@example.com password : 1234
+```
+As for now, the session is not being saved. This is a test function to be upgrated in the near future
+### GET /api/login
+A very easy way to log in and obtain the JWT Token to check out the API's content is\
+using `Postman` or any other similar platforms.\
+Here is an image with the creentials you can use to log in and the way the response must look.\
+The token expires in 2 days.
+# ![alt text](https://github.com/cris0k/NodeJs_Project/blob/main/public/images/Screenshot-example-login.png)
+
 ### POST /api/products
 
-You can post your own ad on the website.\
-A very easy way to do so is using `Postman` or any other similar platforms.
+You can post your own 'advert' on the website.\
+Remember to copy the token after logging in and paste it on the URL
+```
+/api/products?token=<token>
+```
 
-Here is an example and what you should expect to see:
-# ![alt text](https://github.com/cris0k/NodeJs_Project/blob/main/public/images/Screenshot_example-Postman.png)
+or adding `Authorization` to the petition's Headers and adding it as its value.
+
+Here is how it looks like:
+# ![alt text](https://github.com/cris0k/NodeJs_Project/blob/main/public/images/Screenshot-example-post.png)
 
 ### Filter
 
-There are many ways you can filter the data. Here are some ways depending on\
-what would you like to see. You can conbine them all by adding `&` between them.
+If you wish to filter the data there are several ways to do so.\
+Here are some ways depending on what would you like to see. You can conbine them all\
+by adding `&` between them.
 - by name: http://localhost:3000//?name= `item, brand, catacters..` \
 There is no need to write the full name or the first name.
 - by tags: http://localhost:3000//?tags= `school, work, training or technology`\
