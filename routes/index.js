@@ -38,7 +38,7 @@ router.get('/', async(req, res, next) => {
 
     const products = await Product.list(filter, skip, limit, fields, sort);
     
-    res.locals.adverts = products;
+    res.locals.adverts = products.reverse();
 
     res.render('index', { title: 'Nodepop' });
 

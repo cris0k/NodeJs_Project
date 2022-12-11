@@ -23,8 +23,7 @@ nav {
 .advert {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-content: space-around;
+  align-content: center;
 }
 
 .login {
@@ -74,6 +73,7 @@ ul {
   list-style-type: none;
   padding-left: 0;
   max-width: 130px;
+  margin-right: 50px;
 
 }
 .p_name{
@@ -82,7 +82,7 @@ ul {
 }
 .status {
   font-weight: 600;
-  color: green;
+  color: #008000;
 }
 
 button {
@@ -102,7 +102,7 @@ button:hover {
   
 }
 .offer {
-  background-color: yellow;
+  background-color: #ffff00;
 }
 
 footer {
@@ -113,7 +113,7 @@ footer {
 }
 
 .error-message {
-  background-color: rgb(228, 127, 127);
+  background-color: #e47f7f;
   margin-bottom: 15px;
   font-size: 1.5rem;
 }
