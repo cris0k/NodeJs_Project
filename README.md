@@ -100,7 +100,8 @@ Run the microservice
 ```
 npx nodemon resizeService.js
 ```
-Ones is running, every time an advert is uploaded, a copy of the images will be rezised to 100x100 and be added to the thumbnail folder
+Ones is running, every time an advert is uploaded, a copy of the image will be made, rezised to 100x100 and added to the thumbnail folder\
+that will be created in the /public folder the first time you upload an advert.
 
 ### POST /api/products
 
