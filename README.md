@@ -1,5 +1,12 @@
 # NodeJs 'Nodepop' Project
 
+## Server Deployment Project
+
+Check out this NodeJs project and one of my React's projects deployed at Amazon Web Services using Nginx.
+
+`Vallapop React`: http://100.26.168.73 \
+`Nodepop NodeJS`: http://ec2-100-26-168-73.compute-1.amazonaws.com
+
 ## Description
 
 This project is a webside simulation that uses an API to show adverts posted by people\
